@@ -1,17 +1,18 @@
 'use client'
 
-import { CustomButtonType } from '@/types/CustomButtonType'
+import { CustomButtonType } from '@/types'
 import { FC } from 'react'
 
 const CustomButton: FC<CustomButtonType> = ({
 	title,
 	classCustom,
 	handleClick,
+	btnType,
 }) => {
 	return (
 		<button
 			disabled={false}
-			type={'button'}
+			type={btnType || 'button'}
 			className={`custom-btn, ${classCustom}`}
 			onClick={handleClick}
 			style={{ padding: '10px' }}

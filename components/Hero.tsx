@@ -23,9 +23,15 @@ const Hero: FC = () => {
 			</div>
 			<div className='hero__image-container'>
 				<div className='hero__image'>
-					<Image src={'/hero.png'} alt='hero' fill className='object-contain' />
-					<div className='hero__image-overlay'></div>
+					<Image
+						src={'/hero.png'}
+						alt='hero'
+						fill
+						className='object-contain'
+						draggable={false}
+					/>
 				</div>
+				<div className='hero__image-overlay'></div>
 			</div>
 		</div>
 	)
